@@ -5,6 +5,6 @@
     - Start Iptables Persistent
 
 - name: Set Firewall Rules
-  copy: src=rules.v4 dest=/etc/iptables/rules.v4 owner=root group=root mode=644
+  copy: src={{ iptables_file }} dest=/etc/iptables/rules.v4 owner=root group=root mode=644
   notify:
     - Restart Iptables Persistent
